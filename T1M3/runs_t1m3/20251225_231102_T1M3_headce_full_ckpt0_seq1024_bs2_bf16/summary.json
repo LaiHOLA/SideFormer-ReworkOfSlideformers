@@ -1,0 +1,16 @@
+{
+  "run_dir": "runs_t1m3\\20251225_231102_T1M3_headce_full_ckpt0_seq1024_bs2_bf16",
+  "head": "ce_full",
+  "ckpt": 0,
+  "dtype": "bf16",
+  "batch": 2,
+  "seq": 1024,
+  "steps": 30,
+  "mean_wall_ms": 1281.3672700009192,
+  "mean_fwd_ms": 318.46852722167966,
+  "mean_head_fwd_ms": 61.34039878845215,
+  "mean_bwd_ms": 865.6285339355469,
+  "mean_optim_ms": 35.043805567423504,
+  "peak_alloc_gib_max": 13.080285549163818,
+  "peak_reserved_gib_max": 13.833984375
+}

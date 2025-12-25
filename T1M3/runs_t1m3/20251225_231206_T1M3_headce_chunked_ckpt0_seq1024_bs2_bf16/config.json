@@ -1,0 +1,18 @@
+{
+  "model": ".\\qwen",
+  "out": "runs_t1m3",
+  "run_name": "",
+  "head": "ce_chunked",
+  "vocab_chunk": 8192,
+  "dtype": "bf16",
+  "ckpt": 0,
+  "batch": 2,
+  "seq": 1024,
+  "steps": 30,
+  "warmup": 2,
+  "lr": 0.0001,
+  "optim": "sgd",
+  "monitor_ms": 25,
+  "seed": 0,
+  "device": "cuda"
+}
