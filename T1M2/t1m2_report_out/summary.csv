@@ -1,0 +1,2 @@
+run0,run1,skip_steps,mean_step_wall_ms_r0,mean_step_wall_ms_r1,peak_gpu_alloc_gib_r0,peak_gpu_alloc_gib_r1,peak_gpu_resv_gib_r0,peak_gpu_resv_gib_r1,peak_cpu_rss_gib_r0,peak_cpu_rss_gib_r1,mean_layer_total_ms_r0,mean_layer_total_ms_r1
+runs_t1m2\20251225_153129_T1M2_recomp0_seq256_bs1_ep1_spe30,runs_t1m2\20251225_153148_T1M2_recomp1_seq256_bs1_ep1_spe30,1,336.72261034482756,475.8446724137931,7.935821,7.661075,9.28125,8.318359,2.330082,2.697121,9.518184827586207,14.295343805418725
