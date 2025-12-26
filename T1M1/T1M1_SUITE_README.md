@@ -10,10 +10,12 @@
 - `ckpt`：纯 GPU + PyTorch Gradient Checkpoint（反向阶段重算）
 - `slide`：仿 SlideFormer：参数常驻 CPU，H2D 分层预取；激活 offload 到 CPU；反向逐层 recompute；梯度回传到 CPU；CPU 侧做优化器更新
 
-## 一键跑三种 + 出论文图
+## 一键跑三种 + 出论文图（建议）
 ```bash
+python t1_m1_triple.py --model ./qwen --seq 256 --batch 1 --iters 10 --layers 28 --train_layers 28 --optim sgd --lr 1e-4 --modes gpu,ckpt,slide --analyze 1 # SGD
+
 python t1_m1_triple.py --model ./qwen --seq 256 --batch 3 --iters 3 --layers 28 --train_layers 28 \
-  --optim adamw --adam_state_dtype bf16 --lr 1e-4 --modes gpu,ckpt,slide --analyze 1
+  --optim adamw --adam_state_dtype bf16 --lr 1e-4 --modes gpu,ckpt,slide --analyze 1  #ADAM
 ```
 
 ## 自由组合：只跑 ckpt vs slide
