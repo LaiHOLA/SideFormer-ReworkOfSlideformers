@@ -1,0 +1,39 @@
+[RUN_DIR] runs_m1\20251225_203615_T1M1_T1M1_20251225_203549_ckpt_seq256_bs1_iters10_layers28_train28_sgd
+[ENV] {"python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]", "torch": "2.7.0+cu128", "torch_cuda": "12.8", "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU", "bf16_supported": true, "dtype": "torch.bfloat16", "args": {"mode": "ckpt", "model": "./qwen", "seq": 256, "batch": 1, "iters": 10, "layers": 28, "train_layers": 28, "lr": 0.0001, "logdir": "runs_m1", "group": "T1M1_20251225_203549", "seed": 0, "plot": 0, "ckpt_layers": 0, "ckpt_use_reentrant": 0, "prefetch": 1, "pin_mode": "lazy", "cpu_workers": 1, "optim": "sgd", "betas": "0.9,0.999", "eps": 1e-08, "weight_decay": 0.0, "adam_state_dtype": "bf16", "monitor_ms": 5}, "group": "T1M1_20251225_203549"}
+[LOAD] tokenizer/model on CPU ...
+[ROTARY] found: Qwen3RotaryEmbedding, moved to cuda
+[CFG] total_layers=28, use_layers=28, train_layers=28 (range 0..27) mode=ckpt
+[MOVE] moving embedding/layers/norm to cuda ...
+
+========== [ITER 0] ==========
+[ITER 0] wall_s=0.747 forward_s=0.251 backward_s=0.304 optim_s=0.032 peak_alloc=5.86GiB peak_reserved=5.91GiB CPU_RSS=1.28GiB fwd_ms(sum)=248.1 recompute_ms(sum)=239.8 bwd_ms(sum)=278.7
+
+========== [ITER 1] ==========
+[ITER 1] wall_s=0.457 forward_s=0.122 backward_s=0.288 optim_s=0.034 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=119.4 recompute_ms(sum)=351.3 bwd_ms(sum)=275.9
+
+========== [ITER 2] ==========
+[ITER 2] wall_s=0.559 forward_s=0.228 backward_s=0.291 optim_s=0.033 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=224.6 recompute_ms(sum)=567.7 bwd_ms(sum)=277.0
+
+========== [ITER 3] ==========
+[ITER 3] wall_s=0.449 forward_s=0.117 backward_s=0.290 optim_s=0.034 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=113.7 recompute_ms(sum)=673.1 bwd_ms(sum)=275.9
+
+========== [ITER 4] ==========
+[ITER 4] wall_s=0.503 forward_s=0.125 backward_s=0.337 optim_s=0.034 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=122.0 recompute_ms(sum)=785.1 bwd_ms(sum)=324.7
+
+========== [ITER 5] ==========
+[ITER 5] wall_s=0.458 forward_s=0.122 backward_s=0.295 optim_s=0.033 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=117.2 recompute_ms(sum)=894.7 bwd_ms(sum)=283.7
+
+========== [ITER 6] ==========
+[ITER 6] wall_s=0.455 forward_s=0.124 backward_s=0.289 optim_s=0.032 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=119.8 recompute_ms(sum)=1006.2 bwd_ms(sum)=274.1
+
+========== [ITER 7] ==========
+[ITER 7] wall_s=0.459 forward_s=0.124 backward_s=0.295 optim_s=0.033 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=120.2 recompute_ms(sum)=1117.5 bwd_ms(sum)=280.2
+
+========== [ITER 8] ==========
+[ITER 8] wall_s=0.506 forward_s=0.142 backward_s=0.315 optim_s=0.038 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=136.7 recompute_ms(sum)=1244.9 bwd_ms(sum)=301.8
+
+========== [ITER 9] ==========
+[ITER 9] wall_s=0.467 forward_s=0.133 backward_s=0.290 optim_s=0.033 peak_alloc=5.95GiB peak_reserved=6.00GiB CPU_RSS=1.28GiB fwd_ms(sum)=129.5 recompute_ms(sum)=1365.1 bwd_ms(sum)=278.4
+[SAVED] runs_m1\20251225_203615_T1M1_T1M1_20251225_203549_ckpt_seq256_bs1_iters10_layers28_train28_sgd\metrics_iter.csv
+[SAVED] runs_m1\20251225_203615_T1M1_T1M1_20251225_203549_ckpt_seq256_bs1_iters10_layers28_train28_sgd\metrics_layer.csv
+[SAVED] runs_m1\20251225_203615_T1M1_T1M1_20251225_203549_ckpt_seq256_bs1_iters10_layers28_train28_sgd\mem_trace.csv

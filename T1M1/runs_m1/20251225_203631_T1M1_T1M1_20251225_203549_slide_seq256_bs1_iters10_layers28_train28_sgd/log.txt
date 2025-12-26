@@ -1,0 +1,628 @@
+[RUN_DIR] runs_m1\20251225_203631_T1M1_T1M1_20251225_203549_slide_seq256_bs1_iters10_layers28_train28_sgd
+[ENV] {"python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]", "torch": "2.7.0+cu128", "torch_cuda": "12.8", "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU", "bf16_supported": true, "dtype": "torch.bfloat16", "args": {"mode": "slide", "model": "./qwen", "seq": 256, "batch": 1, "iters": 10, "layers": 28, "train_layers": 28, "lr": 0.0001, "logdir": "runs_m1", "group": "T1M1_20251225_203549", "seed": 0, "plot": 0, "ckpt_layers": 0, "ckpt_use_reentrant": 0, "prefetch": 1, "pin_mode": "lazy", "cpu_workers": 1, "optim": "sgd", "betas": "0.9,0.999", "eps": 1e-08, "weight_decay": 0.0, "adam_state_dtype": "bf16", "monitor_ms": 5}, "group": "T1M1_20251225_203549"}
+[LOAD] tokenizer/model on CPU ...
+[ROTARY] found: Qwen3RotaryEmbedding, moved to cuda
+[CFG] total_layers=28, use_layers=28, train_layers=28 (range 0..27) mode=slide
+[MOVE] moving embedding/norm to cuda (weights stay on CPU) ...
+[STAGE] building 2 GPU staging layers (ping-pong) ...
+
+========== [ITER 0] ==========
+[PIN][L00] pinned~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PIN][L01] pinned~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PIN][L02] pinned~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PIN][L03] pinned~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PIN][L04] pinned~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PIN][L05] pinned~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PIN][L06] pinned~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PIN][L07] pinned~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PIN][L08] pinned~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PIN][L09] pinned~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PIN][L10] pinned~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PIN][L11] pinned~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PIN][L12] pinned~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PIN][L13] pinned~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PIN][L14] pinned~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PIN][L15] pinned~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PIN][L16] pinned~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PIN][L17] pinned~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PIN][L18] pinned~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PIN][L19] pinned~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PIN][L20] pinned~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PIN][L21] pinned~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PIN][L22] pinned~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PIN][L23] pinned~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PIN][L24] pinned~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PIN][L25] pinned~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PIN][L26] pinned~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PIN][L27] pinned~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 0] wall_s=3.353 forward_s=2.191 backward_s=1.108 cpu_update_total_s=0.435 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.92GiB prefetch_ms(sum)=425.1 fwd_ms(sum)=186.0 recompute_ms(sum)=45.3 bwd_ms(sum)=181.5
+
+========== [ITER 1] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 1] wall_s=1.557 forward_s=0.494 backward_s=1.059 cpu_update_total_s=0.424 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.92GiB prefetch_ms(sum)=424.8 fwd_ms(sum)=42.5 recompute_ms(sum)=44.8 bwd_ms(sum)=159.7
+
+========== [ITER 2] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 2] wall_s=1.557 forward_s=0.501 backward_s=1.051 cpu_update_total_s=0.423 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.92GiB prefetch_ms(sum)=425.0 fwd_ms(sum)=45.6 recompute_ms(sum)=46.7 bwd_ms(sum)=151.5
+
+========== [ITER 3] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 3] wall_s=1.558 forward_s=0.498 backward_s=1.056 cpu_update_total_s=0.423 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.92GiB prefetch_ms(sum)=424.7 fwd_ms(sum)=43.4 recompute_ms(sum)=47.0 bwd_ms(sum)=153.3
+
+========== [ITER 4] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 4] wall_s=1.573 forward_s=0.497 backward_s=1.072 cpu_update_total_s=0.429 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.92GiB prefetch_ms(sum)=424.6 fwd_ms(sum)=42.6 recompute_ms(sum)=45.8 bwd_ms(sum)=169.3
+
+========== [ITER 5] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 5] wall_s=1.576 forward_s=0.494 backward_s=1.079 cpu_update_total_s=0.437 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.93GiB prefetch_ms(sum)=425.0 fwd_ms(sum)=40.4 recompute_ms(sum)=46.2 bwd_ms(sum)=175.2
+
+========== [ITER 6] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 6] wall_s=1.566 forward_s=0.498 backward_s=1.064 cpu_update_total_s=0.436 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.93GiB prefetch_ms(sum)=425.4 fwd_ms(sum)=44.9 recompute_ms(sum)=46.9 bwd_ms(sum)=160.9
+
+========== [ITER 7] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 7] wall_s=1.590 forward_s=0.498 backward_s=1.088 cpu_update_total_s=0.432 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.93GiB prefetch_ms(sum)=424.7 fwd_ms(sum)=45.0 recompute_ms(sum)=47.8 bwd_ms(sum)=183.0
+
+========== [ITER 8] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 8] wall_s=1.590 forward_s=0.492 backward_s=1.092 cpu_update_total_s=0.446 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.93GiB prefetch_ms(sum)=424.4 fwd_ms(sum)=40.9 recompute_ms(sum)=49.1 bwd_ms(sum)=184.4
+
+========== [ITER 9] ==========
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L27->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L26->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L25->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L24->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L23->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L22->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L21->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L20->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L19->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L18->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L17->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L16->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L15->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L14->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L13->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L12->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L11->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L10->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L09->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L08->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L07->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L06->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L05->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L04->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L03->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L02->S0 queued params=11, bytes~0.094GiB
+[PREFETCH] L01->S1 queued params=11, bytes~0.094GiB
+[PREFETCH] L00->S0 queued params=11, bytes~0.094GiB
+[ITER 9] wall_s=1.574 forward_s=0.494 backward_s=1.076 cpu_update_total_s=0.432 peak_alloc=0.89GiB peak_reserved=0.93GiB CPU_RSS=4.93GiB prefetch_ms(sum)=424.4 fwd_ms(sum)=42.5 recompute_ms(sum)=46.6 bwd_ms(sum)=173.2
+[SAVED] runs_m1\20251225_203631_T1M1_T1M1_20251225_203549_slide_seq256_bs1_iters10_layers28_train28_sgd\metrics_iter.csv
+[SAVED] runs_m1\20251225_203631_T1M1_T1M1_20251225_203549_slide_seq256_bs1_iters10_layers28_train28_sgd\metrics_layer.csv
+[SAVED] runs_m1\20251225_203631_T1M1_T1M1_20251225_203549_slide_seq256_bs1_iters10_layers28_train28_sgd\mem_trace.csv

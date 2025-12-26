@@ -1,0 +1,41 @@
+{
+  "group": "T1M1_20251225_203549",
+  "created_at": "20251225_203549",
+  "cmdline": "t1_m1_triple.py --model ./qwen --seq 256 --batch 1 --iters 10 --layers 28 --train_layers 28 --optim sgd --lr 1e-4 --modes gpu,ckpt,slide --analyze 1",
+  "runs": [
+    {
+      "label": "gpu",
+      "path": "runs_m1\\20251225_203556_T1M1_T1M1_20251225_203549_gpu_seq256_bs1_iters10_layers28_train28_sgd"
+    },
+    {
+      "label": "ckpt",
+      "path": "runs_m1\\20251225_203615_T1M1_T1M1_20251225_203549_ckpt_seq256_bs1_iters10_layers28_train28_sgd"
+    },
+    {
+      "label": "slide",
+      "path": "runs_m1\\20251225_203631_T1M1_T1M1_20251225_203549_slide_seq256_bs1_iters10_layers28_train28_sgd"
+    }
+  ],
+  "args": {
+    "model": "./qwen",
+    "seq": 256,
+    "batch": 1,
+    "iters": 10,
+    "layers": 28,
+    "train_layers": 28,
+    "ckpt_layers": 0,
+    "lr": 0.0001,
+    "logdir": "runs_m1",
+    "modes": "gpu,ckpt,slide",
+    "optim": "sgd",
+    "betas": "0.9,0.999",
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "adam_state_dtype": "bf16",
+    "prefetch": 1,
+    "pin_mode": "lazy",
+    "monitor_ms": 5,
+    "analyze": 1,
+    "analyzer_out": ""
+  }
+}
