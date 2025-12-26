@@ -1,0 +1,2 @@
+epoch,epoch_wall_s,sum_wall_ms,sum_fwd_ms,sum_bwd_ms,sum_opt_ms
+0,18.314254,14515.811700,4327.208839,9166.901764,1017.254204
